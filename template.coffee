@@ -1,6 +1,7 @@
 
 stir = require 'stir-template'
 React = require 'react'
+ReactDOM = require 'react-dom/server'
 
 Page = React.createFactory require './src/page'
 
@@ -25,4 +26,4 @@ module.exports = (data) ->
         script src: data.main, defer: true
       body null,
         div class: 'demo',
-          React.renderToString Page()
+          ReactDOM.renderToString Page()

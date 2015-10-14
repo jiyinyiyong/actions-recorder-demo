@@ -20,6 +20,7 @@ module.exports =
       {test: /\.coffee$/, loader: 'coffee'}
       {test: /\.less$/, loader: 'style!css!less'}
       {test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css!autoprefixer')}
+      {test: /\.json$/, loader: 'json'}
       {test: /\.(eot|woff|woff2|ttf|svg)((\?|\#)[\?\#\w\d_-]+)?$/, loader: "url", query: {limit: 100, name: fontName}}
     ]
   plugins: [
