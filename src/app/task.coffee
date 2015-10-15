@@ -30,9 +30,9 @@ module.exports = React.createClass
 
   styleToggler: (status) ->
     if status
-      bg = 'hsla(240,50%,80%,0.3)'
+      bg = 'hsla(240,10%,30%,0.7)'
     else
-      bg = 'hsla(240,50%,80%,0.9)'
+      bg = 'hsla(240,10%,30%,0.3)'
     display: 'inline-block'
     width: '30px'
     height: '30px'
@@ -44,7 +44,8 @@ module.exports = React.createClass
     verticalAlign: 'midddle'
     lineHeight: '30px'
     border: 'none'
-    backgroundColor: 'hsla(0,100%,80%,0.5)'
+    backgroundColor: 'hsla(0,100%,20%,0.5)'
+    color: 'white'
     padding: '0 10px'
     outline: 'none'
     width: '300px'

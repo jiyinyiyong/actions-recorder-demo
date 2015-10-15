@@ -26,7 +26,8 @@ module.exports = React.createClass
         div style: @styleButton(), onClick: @onCreate, 'add'
 
   styleRoot: ->
-    width: 400
+    width: '40%'
+    padding: '100px 40px'
 
   styleTable: ->
 
@@ -35,5 +36,6 @@ module.exports = React.createClass
   styleButton: ->
     display: 'inline-block'
     padding: '0 10px'
-    backgroundColor: 'hsla(0,80%,80%,0.3)'
+    backgroundColor: 'hsla(0,20%,50%,0.3)'
+    color: 'white'
     cursor: 'pointer'

@@ -6,6 +6,10 @@ Devtools = React.createFactory require 'actions-recorder/lib/devtools'
 Todolist = React.createFactory require './todolist'
 
 updater = require '../updater'
+if typeof window is 'undefined'
+  bg = ''
+else
+  bg = require '../../images/compass.jpg'
 
 div = React.createFactory 'div'
 
@@ -18,8 +22,13 @@ module.exports = React.createClass
 
   renderDevtools: ->
     core = @props.core
-    width = 400
-    height = 400
+
+    if typeof window is 'undefined'
+      width = 600
+      height = 400
+    else
+      width = window.innerWidth * 0.6
+      height = window.innerHeight
 
     Devtools
       store: @props.store
@@ -29,7 +38,7 @@ module.exports = React.createClass
       isTravelling: core.isTravelling
       records: core.records
       width: width
-      height: height
+      height: width
 
   render: ->
     div style: @styleRoot(),
@@ -39,3 +48,8 @@ module.exports = React.createClass
   styleRoot: ->
     display: 'flex'
     flexDirection: 'row'
+    backgroundImage: "url(#{bg})"
+    backgroundSize: 'cover'
+    width: '100%'
+    height: '100%'
+    position: 'absolute'

@@ -18,10 +18,10 @@ gulp.task 'rsync', (cb) ->
   wrapper = require 'rsyncwrapper'
   wrapper.rsync
     ssh: true
-    src: ['index.html', 'build', 'src']
+    src: ['index.html', 'build']
     recursive: true
     args: ['--verbose']
-    dest: 'talk-ui:/teambition/server/talk-ui/coffee-webpack-starter'
+    dest: 'tiye:~/repo/actions-recorder-demo'
     deleteAll: true
   , (error, stdout, stderr, cmd) ->
     if error?

@@ -1,12 +1,12 @@
 
-CoffeeScript Webpack Starter
+Actions Recorder Demo
 ----
 
-React project tempate at Talk.
-
-Demo http://ui.talk.ai/coffee-webpack-starter
+Demo http://repo.tiye.me/actions-recorder-demo
 
 ### Usage
+
+Read in `src/` to see how `actions-recorder` works.
 
 ### Develop
 
@@ -28,6 +28,10 @@ Build (Pack and optimize js, reivision js and add entry in `index.html`):
 ```bash
 gulp build
 ```
+
+# Theme
+
+http://desktopinhq.com/images/big/compass-1433192.jpg
 
 ### License
 
