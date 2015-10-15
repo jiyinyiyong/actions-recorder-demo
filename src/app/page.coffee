@@ -3,6 +3,7 @@ React = require 'react'
 Immutable = require 'immutable'
 
 Devtools = React.createFactory require 'actions-recorder/lib/devtools'
+Todolist = React.createFactory require './todolist'
 
 updater = require '../updater'
 
@@ -17,6 +18,8 @@ module.exports = React.createClass
 
   renderDevtools: ->
     core = @props.core
+    width = 400
+    height = 400
 
     Devtools
       store: @props.store
@@ -25,9 +28,14 @@ module.exports = React.createClass
       pointer: core.pointer
       isTravelling: core.isTravelling
       records: core.records
-      width: window.innerWidth - 600
-      height: window.innerHeight
+      width: width
+      height: height
 
   render: ->
-    div className: 'app-page',
+    div style: @styleRoot(),
+      Todolist tasks: @props.store
       @renderDevtools()
+
+  styleRoot: ->
+    display: 'flex'
+    flexDirection: 'row'

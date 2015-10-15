@@ -9,7 +9,7 @@ exports.update = (id, text) ->
   recorder.dispatch 'todo/update', {id, text}
 
 exports.toggle = (id) ->
-  recorder.dispatch 'todo/update', id
+  recorder.dispatch 'todo/toggle', id
 
 exports.archive = ->
   recorder.dispatch 'todo/archive', id
