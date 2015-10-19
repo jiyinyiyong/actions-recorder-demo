@@ -5,7 +5,6 @@ Immutable = require 'immutable'
 Devtools = React.createFactory require 'actions-recorder/lib/devtools'
 Todolist = React.createFactory require './todolist'
 
-updater = require '../updater'
 if typeof window is 'undefined'
   bg = ''
 else
@@ -32,7 +31,7 @@ module.exports = React.createClass
 
     Devtools
       store: @props.store
-      updater: updater
+      updater: core.updater
       initial: core.initial
       pointer: core.pointer
       isTravelling: core.isTravelling

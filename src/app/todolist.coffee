@@ -17,6 +17,9 @@ module.exports = React.createClass
   onCreate: ->
     actions.create()
 
+  onArchive: ->
+    actions.archive()
+
   render: ->
     div style: @styleRoot(),
       div style: @styleTable(),
@@ -24,6 +27,7 @@ module.exports = React.createClass
           Task task: task, key: task.get('id')
       div style: @styleFooter(),
         div style: @styleButton(), onClick: @onCreate, 'add'
+        div style: @styleButton(), onClick: @onArchive, 'archive'
 
   styleRoot: ->
     width: '40%'
@@ -39,3 +43,4 @@ module.exports = React.createClass
     backgroundColor: 'hsla(0,20%,50%,0.3)'
     color: 'white'
     cursor: 'pointer'
+    marginRight: '10px'

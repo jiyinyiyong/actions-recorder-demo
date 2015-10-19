@@ -12,4 +12,4 @@ exports.toggle = (id) ->
   recorder.dispatch 'todo/toggle', id
 
 exports.archive = ->
-  recorder.dispatch 'todo/archive', id
+  recorder.dispatch 'todo/archive'

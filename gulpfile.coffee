@@ -4,8 +4,8 @@ sequence = require('run-sequence')
 exec = require('child_process').exec
 env =
   dev: true
-  main: 'http://localhost:8080/build/main.js'
-  vendor: 'http://localhost:8080/build/vendor.js'
+  main: 'http://repo:8080/build/main.js'
+  vendor: 'http://repo:8080/build/vendor.js'
 
 gulp.task 'script', ->
   coffee = require('gulp-coffee')
